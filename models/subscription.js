@@ -23,7 +23,8 @@ module.exports = (sequelize, DataTypes) => {
         cardNumber: DataTypes.STRING,
         holderName: DataTypes.STRING,
         expirationDate: DataTypes.STRING,
-        cvv: DataTypes.STRING
+        cvv: DataTypes.STRING,
+        userId: DataTypes.INTEGER
     }, {
         sequelize,
         modelName: 'Subscription',
