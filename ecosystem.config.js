@@ -1,3 +1,6 @@
+const AMQP_CONNECTION_STRING = 'amqps://vqjqnjwv:e9KWygl2kOrXqDnL_Hfc5BCmhjYMopwi@chimpanzee.rmq.cloudamqp.com/vqjqnjwv';
+const AMQP_CHANNEL_NAME = 'PAYMENTS_GATEWAY';
+const AMQP_QUEUE_NAME = 'PAYMENTS_QUEUE';
 module.exports = {
     apps: [
         {
@@ -33,6 +36,19 @@ module.exports = {
             env_production: {
                 NODE_ENV: 'production',
             }
+        },
+        {
+            name: "payments-service",
+            script: './payments-service/index.js',
+            watch: true,
+            env: {
+                AMQP_CONNECTION_STRING,
+                AMQP_CHANNEL_NAME,
+                AMQP_QUEUE_NAME
+            },
+            env_production: {
+
+            }
         }
     ]
-}
+};
