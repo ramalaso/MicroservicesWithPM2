@@ -5,7 +5,7 @@ const path = require('path');
 const Sequelize = require('sequelize');
 const basename = path.basename(__filename);
 const env = process.env.NODE_ENV || 'development';
-const config = require(__dirname + '/../config/config.js');
+const config = require(__dirname + '../config/config.js');
 const db = {};
 
 let sequelize = new Sequelize({
@@ -16,7 +16,6 @@ let sequelize = new Sequelize({
   database: config.database,
   dialect: "mysql"
 });
-
 
 fs
   .readdirSync(__dirname)
