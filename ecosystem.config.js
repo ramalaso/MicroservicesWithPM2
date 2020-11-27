@@ -31,7 +31,10 @@ module.exports = {
                 MYSQL_HOST: 'localhost',
                 MYSQL_PORT: 3308,
                 MYSQL_BD: 'SubscriptionsDb',
-                PORT: 3002
+                PORT: 3002,
+                AMQP_CONNECTION_STRING,
+                AMQP_CHANNEL_NAME,
+                AMQP_QUEUE_NAME
             },
             env_production: {
                 NODE_ENV: 'production',
